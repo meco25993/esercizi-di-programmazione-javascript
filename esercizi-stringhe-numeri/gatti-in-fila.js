@@ -12,3 +12,14 @@
   Hint: Se vuoi usare l'arrotondamento ti consiglio di non usare Math.round (arrotonda all'intero superiore solo da .5 in su) ma utilizza Math.ceil (arrotonda sempre all'intero superiore).
   http://www.imparareaprogrammare.it
 */
+
+var cat = 44;
+var catrow = 6;
+
+var row = cat / catrow;
+
+row = Math.ceil(row);
+
+var missing = row * catrow - cat;
+
+console.log('Avendo ' +cat +' gatti disposti in fila per ' +catrow+ ', vi saranno ' + row+ ' file totali, ma nell\'ulima fila mancheranno ' +missing+ ' gatti per completarla');
