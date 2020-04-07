@@ -6,10 +6,9 @@
   http://www.imparareaprogrammare.it
 */
 
-var c = Math.random () + 100;
-var c = Math.round(c);
-
-if ( c == 0 ) { var c = 1; };
+var costante = 100;
+var c = Math.round(Math.random () + costante);
+if ( c == 0 ) { c = 1; };
 
 console.log ('Il numero casuale è ' + c);
 
@@ -19,19 +18,11 @@ var two = 35;
 var n = one;
 var m = two;
 
-if ( c > n) {
-  var n = c - n;
-}
-else {
-  var n = n - c;
-}
+if ( c > n) {  var n = c - n; }
+else { var n = n - c; }
 
-if ( c > m) {
-  var m = c - m;
-}
-else {
-  var m = m - c;
-}
+if ( c > m) { var m = c - m; }
+else { var m = m - c;}
 
 if ( one == two && c == one) {
   console.log ("Tutti e due gli utenti hanno indovinato il numero "+ one)
