@@ -6,3 +6,21 @@
   Hint: Per generare un numero casuale utlizza la funzione javascript random, che restituisce un intervallo compreso tra 0 e 1 che necessita di essere convertito per il tuo intervallo.
   http://www.imparareaprogrammare.it
 */
+
+var n = [];
+
+for ( var i = 0; i < 100; i++) {
+  n[i] = Math.round(Math.random() * 49 +1)
+}
+
+var utente = [10, 2, 5, 70, 3];
+
+utente.forEach(function(item, index){
+  for (i = 0; i < 100; i++) {
+    if ( n[i] % item === 0) {
+      n[i] = 0;
+    }
+  }
+})
+
+console.log(n);
