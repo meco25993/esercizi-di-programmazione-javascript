@@ -21,3 +21,33 @@
 
   http://www.imparareaprogrammare.it
 */
+
+const n = 5;
+const m = 7;
+const mat = [];
+const righe = [];
+const col = [];
+
+for (let i = 0; i < n; i++){
+  let a = 0;
+  let temp = [];
+  for(let j = 0; j < m; j++){
+    let b = Math.round(Math.random()*99+1);
+    temp.push(b);
+    a += b;
+  }
+  mat.push(temp);
+  righe.push(a);
+}
+
+for (let i = 0; i < m; i++){
+  let a = 0;
+  for (let j = 0; j < n; j++){
+    a += mat[j][i];
+  }
+  col.push(a);
+}
+
+console.log(mat);
+console.log(righe);
+console.log(col);

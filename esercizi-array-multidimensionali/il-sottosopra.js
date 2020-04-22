@@ -3,7 +3,7 @@
   Scrivi un programma che prenda in input un array multidimensionale e stampi in output la sua trasposta.
 
   Esempio:
-    Input: 
+    Input:
       [
         [1, 2],
         [3, 4],
@@ -17,3 +17,16 @@
 
   http://www.imparareaprogrammare.it
 */
+
+var x = [[1, 2],[3, 4],[5, 6]];
+var a = [];
+
+for ( var i = 0; i < x[0].length; i++) {
+  var temp = [];
+  for ( c= 0; c < x.length; c++ ) {
+    temp.push(x[c][i]);
+  }
+  a.push(temp);
+}
+
+console.log(a);
