@@ -13,6 +13,16 @@
     Input: n = 2, m = 2
     Output: TRUE
 
-    
+
   http://www.imparareaprogrammare.it
 */
+
+function uguaglianza (x,y) {
+  if (x === y){
+    console.log (`TRUE`);
+  } else {
+    console.log (`FALSE`)
+  }
+}
+
+uguaglianza(5,'5');

@@ -8,3 +8,10 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function random (x) {
+  var i = Math.round(Math.random()*x);
+  console.log(`il numero casuale sceltro tra 0 e ${x} è ${i}`);
+}
+
+random(50);

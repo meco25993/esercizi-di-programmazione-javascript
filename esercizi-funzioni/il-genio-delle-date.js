@@ -11,6 +11,18 @@
   Consigli:
   Puoi definire un array con i giorni di ogni mese e ciclarlo.
 
-          
+
   http://www.imparareaprogrammare.it
 */
+
+function gAnno (g,m){
+  mesi = [31,29,31,30,31,30,31,31,30,31,30,31];
+  let tot = 0;
+  for (let i = 0; i < m-1; i++){
+    tot += mesi[i];
+  }
+  tot += g;
+  console.log(tot);
+}
+
+gAnno(5,2);

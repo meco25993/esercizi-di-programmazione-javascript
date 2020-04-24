@@ -14,3 +14,42 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function seven (x) {
+  if (x > 0 && x < 8 )
+    return true;
+  else
+    return false;
+}
+
+function week (x) {
+  if (seven(x) === true) {
+   switch (x) {
+    case 1:
+     console.log ('Lunedi');
+     break;
+    case 2:
+      console.log('Martedi');
+      break;
+    case 3:
+      console.log('Mercoledi');
+      break;
+    case 4:
+      console.log('Giovedi');
+      break;
+    case 5:
+      console.log('Venerdi');
+      break;
+    case 6:
+      console.log('Sabato');
+      break;
+    case 7:
+      console.log('Domenica');
+      break;
+   }
+  }
+  else
+   console.log('Peccato, non posso indovinare il giorno.');
+}
+
+week (4);

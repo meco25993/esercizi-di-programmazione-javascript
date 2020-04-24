@@ -20,3 +20,27 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function primo(x) {
+  for (let i = 2; i < x; i++){
+    var controllo = x % i;
+    if (controllo === 0)
+      return false;
+    }
+  return true;
+}
+
+function stampaprimo(x){
+  let i = 0;
+  let prim = 0;
+  while ( i < x){
+    prim++;
+    if (primo(prim) === true){
+      console.log(prim);
+      i++;
+    }
+  }
+}
+
+console.log(primo(5));
+stampaprimo(10);

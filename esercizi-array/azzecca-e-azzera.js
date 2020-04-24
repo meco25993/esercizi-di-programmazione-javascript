@@ -10,17 +10,25 @@
 var n = [];
 
 for ( var i = 0; i < 100; i++) {
-  n[i] = Math.round(Math.random() * 49 +1)
+  n.push(Math.round(Math.random() * 49 +1));
 }
 
-var utente = [10, 2, 5, 70, 3];
+//var utente = [10, 2, 5, 70, 3];
+var i = 0;
 
-utente.forEach(function(item, index){
-  for (i = 0; i < 100; i++) {
-    if ( n[i] % item === 0) {
-      n[i] = 0;
-    }
+while ( i < n.length) {
+  if (n[i] === 0) {
+    i++
+  } else {
+    var utente = prompt(`Abbiamo questi numeri ${n}\n Inserendo un numero da 1 a 50 azzererai tutti i numeri divisibili per il numero scelto`);
+    n.forEach(function(item, index){
+        if ( item % utente === 0) {
+          n[index] = 0;
+        }
+    })
   }
-})
+}
+
+
 
 console.log(n);

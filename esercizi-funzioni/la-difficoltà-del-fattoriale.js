@@ -12,3 +12,12 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function fattoriale(x) {
+  let fat = 1;
+  for (let i = 1; i <= x; i++)
+    fat = fat * i;
+  console.log(fat);
+}
+
+fattoriale(5);

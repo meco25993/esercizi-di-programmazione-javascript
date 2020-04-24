@@ -11,6 +11,16 @@
             1
             0
 
-            
+
   http://www.imparareaprogrammare.it
 */
+
+function tiktak (x) {
+  let time = x;
+  for (let i = 0; i < x; i++) {
+    time = time - 1;
+    console.log(time);
+  }
+}
+
+tiktak(10);

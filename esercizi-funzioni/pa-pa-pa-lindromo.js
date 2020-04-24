@@ -14,3 +14,19 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function palindroma (str){
+  let palindromo = '';
+  for (let i = 0; i < str.replace(/\W/g, "").length; i++) {
+    if (palindromo === '')
+      palindromo = str.replace(/\W/g, "").slice(-1);
+    else
+      palindromo += str.replace(/\W/g, "").slice(-i-1,-i);
+  }
+  if (str.replace(/\W/g, "") === palindromo)
+    return true;
+  else
+    return false;
+}
+
+console.log(palindroma('i topi non avevano nipoti'));

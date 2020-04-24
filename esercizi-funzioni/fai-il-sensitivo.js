@@ -15,3 +15,38 @@
 
   http://www.imparareaprogrammare.it
 */
+
+function sensitivo (a,b,n){
+  if (Math.abs(a-n) === Math.abs(b-n)) {
+    return 0;
+  } else if (Math.abs(a-n) > Math.abs(b-n)){
+    return 1;
+  } else {
+    return -1;
+  }
+}
+
+var number = Math.round(Math.random()*99+1);
+var i = 0;
+var chi = '';
+
+while (i < 1) {
+  var utente1 = Number.parseInt(prompt(`${chi}Utente 1 inserisci un numero da 1 a 100 numero ${number}`));
+  var utente2 = Number.parseInt(prompt(`${chi}Utente 2 inserisci un numero da 1 a 100 numero ${number}`));
+  if (utente1 === number) {
+    alert(`l'utente 1 ha indovinato il numero ${number}`);
+    i++;
+  } else if (utente2 === number) {
+    alert(`l'utente 2 ha indovinato il numero ${number}`);
+    i++;
+  } else {
+    chi = '';
+    if (sensitivo(utente1,utente2,number) === 0) {
+      chi += `Vi siete avvicinati alla stesso modo al numero\n`;
+    } else if (sensitivo(utente1,utente2,number) === 1) {
+      chi += `L'utente 2 si è avicinato di più al numero\n`;
+    } else {
+      chi += `L'utente 1 si è avicinato di più al numero\n`;
+    }
+  }
+}

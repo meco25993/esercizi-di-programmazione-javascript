@@ -9,6 +9,17 @@
     Input: numero = 245
     Output: 3 cifre
 
-    
+
   http://www.imparareaprogrammare.it
 */
+
+function conta (x){
+  if (x <= 9999) {
+    var n = x.toString();
+    console.log(n.length);
+  } else {
+    console.log ('il numero è maggiore a 9999 non posso contarlo');
+  }
+}
+
+conta(245);
